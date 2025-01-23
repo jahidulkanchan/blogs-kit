@@ -7,7 +7,7 @@ const Navbar = async() => {
     const  user  = await getUser();
     return (
       <main className="container flex justify-between items-center px-8 bg-slate-50 py-5 mx-auto">
-        <ul className="flex justify-center font-semibold gap-5 items-center">
+        <ul className="flex justify-center text-black font-semibold gap-5 items-center">
           <li>
             <Link href="/">Home</Link>
           </li>
