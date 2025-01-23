@@ -7,11 +7,11 @@ const BlogPage = async({params}) => {
   const {userId,title,body} = singlePost;
   return (
     <>
-       <div className="bg-slate-50 min-h-[600px] container flex justify-center items-center mx-auto shadow">
+       <div className="bg-slate-50 min-h-[500px] container flex justify-center items-center mx-auto shadow">
           <div className="bg-white min-h-[200px] rounded-xl px-5 py-4 shadow-md lg:w-1/2">
-          <h2 className="text-3xl mb-3">{title}</h2>
+          <h2 className="text-3xl text-black mb-3">{title}</h2>
           <p className="text-justify text-slate-600">{body}</p>
-          <Link className="block text-2xl mt-4 w-fit" href='/' ><MdKeyboardBackspace /></Link>
+          <Link className="block text-black text-2xl mt-4 w-fit" href='/' ><MdKeyboardBackspace /></Link>
           </div>
        </div>
     </>
