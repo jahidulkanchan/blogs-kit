@@ -5,7 +5,6 @@ import Link from "next/link";
 const Navbar = async() => {
     const {getUser} = getKindeServerSession();
     const  user  = await getUser();
-    console.log(user);
     return (
       <main className="container flex justify-between items-center px-8 bg-slate-50 py-5 mx-auto">
         <ul className="flex justify-center font-semibold gap-5 items-center">

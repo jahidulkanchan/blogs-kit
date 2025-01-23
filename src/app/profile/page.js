@@ -5,7 +5,6 @@ import { FaEnvelope, FaUserCircle } from "react-icons/fa";
 const ProfilePage = async() => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
-  console.log(user);
   const {given_name, family_name,email,picture} = user || {}
   return (
     <>
