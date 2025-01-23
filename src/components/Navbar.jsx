@@ -7,25 +7,23 @@ const Navbar = async() => {
     const  user  = await getUser();
     console.log(user);
     return (
-      <main className="container bg-slate-300 py-5 mx-auto">
-        <ul className="flex justify-center gap-5 items-center">
+      <main className="container flex justify-between items-center px-8 bg-slate-50 py-5 mx-auto">
+        <ul className="flex justify-center font-semibold gap-5 items-center">
           <li>
             <Link href="/">Home</Link>
           </li>
           <li>
             {user? <Link href="/profile">Profile</Link> : <LoginLink>Profile</LoginLink> }
           </li>
-          {user? 
-          <li>
-            <LogoutLink><button>logout</button></LogoutLink>
-          </li> : 
-          <li>
-            <LoginLink postLoginRedirectURL="/profile">
-              <button>Login</button>
-            </LoginLink>
-          </li>
-          }
         </ul>
+        <div>
+        {user? 
+            <LogoutLink><button className="px-8 py-2 font-semibold rounded bg-blue-400 text-slate-50" >Logout</button></LogoutLink>:
+            <LoginLink postLoginRedirectURL="/profile">
+              <button className="px-8 py-2 font-semibold rounded bg-blue-400 text-slate-50">Login</button>
+            </LoginLink>
+          }
+        </div>
       </main>
     );
 };
