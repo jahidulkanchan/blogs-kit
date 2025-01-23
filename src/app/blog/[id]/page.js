@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { MdKeyboardBackspace } from "react-icons/md";
 const BlogPage = async({params}) => {
-  const { id } = params;
+  const { id } = await params;
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
   const singlePost = await response.json();
   const {userId,title,body} = singlePost;
